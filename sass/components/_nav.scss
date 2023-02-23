@@ -1,0 +1,131 @@
+.nav {
+  font-family: "MontserratB";
+  border: 1px red dotted;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  grid-template-rows: repeat(2, min-content);
+
+  width: 1150px;
+
+  background-color: white;
+  padding: 5rem 1rem 1px 15rem;
+
+  &__lblock {
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 50px;
+  }
+
+  &__rblock {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+
+    display: flex;
+    justify-content: flex-end;
+
+    padding-right: 25rem;
+    padding-top: 20px;
+
+    &__logo1 {
+      // margin-left: 25px;
+      margin-right: 35px;
+      max-width: 35px;
+      padding-top: 15px;
+    }
+
+    &__logo2 {
+      color: #3f3e3e;
+      font-size: 35px;
+      font-weight: 1000;
+    }
+
+    &__dropl {
+      grid-row: 2 / 3;
+      grid-column: 1 / 4;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      font-family: "OpenSans";
+      font-weight: 600;
+      border-top: 1px rgb(231, 236, 236) solid;
+      background-color: white;
+      display: none;
+    }
+  }
+
+  &__icons {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    display: none;
+  }
+
+  &__toggle:checked ~ &__dropl {
+    display: block;
+    li {
+      padding: 10rem 5rem;
+      font-size: 22px;
+      margin-left: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 1151px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    max-width: 1151px;
+  }
+
+  &__toggle:not(:checked) ~ &__dropl {
+    display: none;
+  }
+
+  &__rblock {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    display: none;
+  }
+
+  &__dropl {
+    display: none;
+  }
+
+  &__icons {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    display: block;
+    font-family: "OpenSans";
+    flex-wrap: wrap;
+
+    // min-width: 900px;
+
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+    font-weight: bold;
+
+    line-height: 30px;
+  }
+
+  &__lblock {
+    // margin-left: 60px;
+    padding-left: 1rem;
+  }
+
+  .icon_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 30px;
+    // margin-right: 50px;
+
+    max-width: 1200px;
+
+    // justify-content: flex-end;
+    // justify-content: space-around;
+    // // align-content: center;
+    // width: 800px;
+  }
+}

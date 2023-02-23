@@ -1,0 +1,143 @@
+.container1 {
+  display: grid;
+  // max-width: 1150px;
+  height: 100%;
+  // justify-content: center;
+  // border: 5px black dotted;
+  // align-items: center;
+}
+
+.container2 {
+  display: grid;
+  max-width: 1000px;
+  height: 400px;
+  justify-items: center;
+  // border: 5px black dotted;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.hero {
+  padding-top: 340rem;
+  padding-bottom: 265rem;
+  display: grid;
+  // border: 5px orange dotted;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  max-width: 1150px;
+
+  &--bgimg {
+    background-image: url(../../images/hero-small.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    max-width: 100%;
+    box-shadow: 0 3000px rgba(0, 0, 0, 0.4) inset;
+  }
+}
+
+h1 {
+  // font-family: "Montserrat";
+  // font-size: 115rem;
+  // font-size: 10vw;
+  color: white;
+  // font-weight: 700;
+  line-height: 50px;
+  padding-top: 5px;
+  max-width: 800px;
+  // border: 5px black dotted;
+}
+
+h2 {
+  display: flex;
+  font-family: "Montserrat";
+  // font-size: 77rem;
+  font-size: 7vw;
+  color: white;
+  // border: 5px black dotted;
+  letter-spacing: 4px;
+  line-height: 20px;
+  max-width: 800px;
+  padding-top: 25px;
+  justify-content: center;
+}
+
+p {
+  display: grid;
+  max-width: 850px;
+  font-family: "OpenSans";
+  font-size: 23rem;
+  letter-spacing: 1px;
+  color: white;
+  text-align-last: center;
+  border: 5px black dotted;
+  align-items: center;
+}
+
+.button {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
+  justify-items: center;
+}
+
+.vfeatures {
+  display: grid;
+  border: 2px white solid;
+  width: fit-content;
+  word-spacing: 3px;
+  letter-spacing: 6px;
+  color: white;
+  border-radius: 10px;
+  font-family: opensans;
+  font-size: 27px;
+  align-items: center;
+  padding: 20px 25px 20px 25px;
+}
+
+.download {
+  display: grid;
+  border: none;
+  width: max-content;
+  color: white;
+  background-color: #0693e3;
+  border-radius: 10px;
+  font-family: opensans;
+  font-size: 25px;
+  padding: 20px 35px 20px 35px;
+}
+
+@media screen and (min-width: 1151px) {
+  .container1 {
+    max-width: none;
+  }
+
+  h1 {
+    // font-size: 50rem;
+    // font-size: 40px;
+    width: 300px;
+    line-height: none;
+  }
+
+  h2 {
+    // font-size: 50rem;
+    // font-size: 3vw;
+    width: 300px;
+  }
+
+  .button {
+    // display: flex;
+    // flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
